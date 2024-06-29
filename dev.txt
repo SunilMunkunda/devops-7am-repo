@@ -1,3 +1,2 @@
 creating new file in dev branch
 changes in master for dev file in dev.txt
-making changes in dev file
