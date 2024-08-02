@@ -1,0 +1,28 @@
+pipeline {
+  agent any 
+  stages 
+  {
+    stage("1. Creating fileand folders"){
+      steps {
+        sh "mkdir declarative"
+        sh "cd declarative"
+        sh "touch myfile.txt"
+        sh "mkdir output"
+        WriteFile file:"output/sample.txt",text:"This is the text file created for declarative"
+      }
+    }
+
+
+    stage ("2. View date and systeminfo"){
+      steps {
+        sh "date"
+        sh "uname -a"
+        sh "uptime"
+        sh "uname -r"
+        sh "cal 2025"
+        sh "ls -altrs"
+      }
+    }
+  }
+}
+        
