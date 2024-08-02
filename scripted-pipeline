@@ -16,5 +16,6 @@ node {
 	stage "4. view the system info"
 	sh "cal 2024"
 	sh "uname -a"
+        uptime
 	}
 
