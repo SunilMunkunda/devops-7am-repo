@@ -1,0 +1,20 @@
+/ Scripted pipeline
+node {
+	stage "1. update the system"
+	sh "yum update -y"
+	sh "pwd"
+	sh "ls"
+	
+	stage "2. create folder and files"
+	sh "mkdir test"
+	sh "touch test/simple.txt"
+	
+	stage "3. uptime of the system"
+	sh "uptime"
+	sh "date"
+	
+	stage "4. view the system info"
+	sh "cal 2024"
+	sh "uname -a"
+	}
+
